@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-nav {
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    background-color: teal;
+    height: 5vh;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+ul {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+
+.log {
+    margin-left: 40px;
+}
+
+ul li {
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li a {
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+section {
+    display: flex;
+    margin: 50px;
+    transition: all 3s;
+}
+
+section div {
+    margin: 50px;
+}
+
+main {
+    background-image: url('img/paulina-cadoret-5neWWiMk_w4-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 1000px;
+    width: 100%;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.section-one {
+    opacity: 0;
+}
+
+.section-two {
+    transform: translateX(-30%);
+    opacity: 0;
+}
+
+.section-three {
+    transform: translateX(30%);
+    opacity: 0;
+}
+
+.section-one-avtive {
+    opacity: 1;
+    animation: flip-vertical-fwd 3.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+.section-two-avtive {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.section-three-avtive {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+@-webkit-keyframes flip-vertical-fwd {
+    0% {
+        -webkit-transform: translateZ(0) rotateY(0);
+        transform: translateZ(0) rotateY(0);
+    }
+    25% {
+        -webkit-transform: translateZ(160px) rotateY(180deg);
+        transform: translateZ(160px) rotateY(180deg);
+    }
+    50% {
+        -webkit-transform: translateZ(0) rotateY(0);
+        transform: translateZ(0) rotateY(0);
+    }
+    100% {
+        -webkit-transform: translateZ(-160px) rotateY(-180deg);
+        transform: translateZ(-160px) rotateY(-180deg);
+    }
+}
+
+@keyframes flip-vertical-fwd {
+    0% {
+        -webkit-transform: translateZ(0) rotateY(0);
+        transform: translateZ(0) rotateY(0);
+    }
+    50% {
+        -webkit-transform: translateZ(160px) rotateY(180deg);
+        transform: translateZ(160px) rotateY(180deg);
+    }
+    100% {
+        -webkit-transform: translateZ(0) rotateY(0);
+        transform: translateZ(0) rotateY(0);
+    }
+}
